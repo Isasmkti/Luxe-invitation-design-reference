@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Invites - Digital Invitation Marketplace</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "primary-hover": "#dcb12d",
+                        "background-light": "#ffffff",
+                        "background-subtle": "#f9f9f9",
+                        "background-dark": "#221e10",
+                        "text-main": "#181611",
+                        "text-muted": "#6b6b6b",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"],
+                        "serif-heading": ["Playfair Display", "serif"], // Added for elegance based on description
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.01)',
+                    }
+                },
+            },
+        }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #b8860b 0%, #f4c025 50%, #b8860b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(135deg, #f4c025 0%, #eac14d 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary-gradient:hover {
+            background: linear-gradient(135deg, #eac14d 0%, #f4c025 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(244, 192, 37, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased transition-colors duration-200">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-50 w-full border-b border-[#f0eee6] bg-white/90 backdrop-blur-md dark:border-white/10 dark:bg-background-dark/90">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">diamond</span>
+</div>
+<span class="font-serif-heading text-2xl font-bold tracking-tight text-text-main dark:text-white">Luxe Invites</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary" href="#">Collections</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary" href="#">Our Story</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary" href="#">Reviews</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex h-10 items-center justify-center rounded-full border border-gray-200 bg-white px-6 text-sm font-medium text-text-main hover:bg-gray-50 hover:border-primary/50 transition-all dark:bg-white/5 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+                    Sign In
+                </button>
+<button class="btn-primary-gradient flex h-10 items-center justify-center rounded-full px-6 text-sm font-bold text-gray-900">
+                    Contact Us
+                </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-12 pb-16 lg:pt-24 lg:pb-32">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-background-light to-background-light dark:from-primary/5 dark:via-background-dark dark:to-background-dark"></div>
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+<div class="flex flex-col gap-6 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 self-center rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary-hover lg:self-start dark:text-primary">
+<span class="material-symbols-outlined text-base">auto_awesome</span>
+                        New Collection 2024
+                    </div>
+<h1 class="text-4xl font-bold leading-tight tracking-tight text-text-main sm:text-5xl lg:text-6xl dark:text-white">
+                        Timeless Digital <br/>
+<span class="gold-gradient-text">Invitations</span> for Your <br/>
+                        Special Day
+                    </h1>
+<p class="text-lg leading-relaxed text-text-muted dark:text-gray-300 max-w-xl mx-auto lg:mx-0">
+                        Elevate your wedding announcement with our curated collection of premium digital templates. Experience the perfect blend of elegant design and modern convenience.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+<button class="btn-primary-gradient inline-flex h-12 items-center justify-center gap-2 rounded-full px-8 text-base font-bold text-gray-900 shadow-lg shadow-primary/25">
+                            Explore Collection
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<button class="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-8 text-base font-medium text-text-main hover:bg-gray-50 transition-colors dark:bg-white/5 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+                            How it Works
+                        </button>
+</div>
+</div>
+<div class="relative mx-auto w-full max-w-[500px] lg:max-w-none">
+<div class="aspect-[4/5] overflow-hidden rounded-2xl bg-gray-100 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 ease-out" data-alt="Elegant wedding invitation displayed on a mobile phone surrounded by flowers" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfeAloPg-cZlNbSLL6BY53byxE6V9DUNa5tKLNlgaa-7A9ULQQm13UNdRsU0v7PcoKcxv30marBPp5UAbmlyIS201lq236wflUaelfuaYLvmFdobSuhs2UrwAz2MkB29eeCSdv4NPx_8dbRyjWOaFQsdCIMRMztZ1A9-mzxOUv17YuL_koesIvy8KdyTnzKS-GE9BB1EAccalgUH4OK1jwWoe7_HGC-mZ4ETq0DEssZxhtLBC8kuiOC5rNK0_rP9l6jTRubimDy_tP'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<!-- Decor elements -->
+<div class="absolute -bottom-6 -left-6 -z-10 h-64 w-64 rounded-full bg-primary/20 blur-3xl"></div>
+<div class="absolute -top-6 -right-6 -z-10 h-64 w-64 rounded-full bg-orange-100 blur-3xl dark:bg-primary/10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="border-y border-[#f0eee6] bg-background-subtle py-4 dark:border-white/5 dark:bg-white/5">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
+<h2 class="hidden text-lg font-bold text-text-main md:block dark:text-white font-serif-heading">Filter By:</h2>
+<div class="flex flex-1 gap-3 overflow-x-auto pb-2 md:justify-center md:pb-0 no-scrollbar">
+<button class="whitespace-nowrap rounded-full bg-text-main px-6 py-2 text-sm font-medium text-white shadow-md dark:bg-white dark:text-background-dark">
+                    All Designs
+                </button>
+<button class="whitespace-nowrap rounded-full border border-gray-200 bg-white px-6 py-2 text-sm font-medium text-text-muted hover:border-primary hover:text-primary transition-colors dark:bg-transparent dark:border-white/20 dark:text-gray-300 dark:hover:border-primary">
+                    Floral
+                </button>
+<button class="whitespace-nowrap rounded-full border border-gray-200 bg-white px-6 py-2 text-sm font-medium text-text-muted hover:border-primary hover:text-primary transition-colors dark:bg-transparent dark:border-white/20 dark:text-gray-300 dark:hover:border-primary">
+                    Modern Minimal
+                </button>
+<button class="whitespace-nowrap rounded-full border border-gray-200 bg-white px-6 py-2 text-sm font-medium text-text-muted hover:border-primary hover:text-primary transition-colors dark:bg-transparent dark:border-white/20 dark:text-gray-300 dark:hover:border-primary">
+                    Luxury Gold
+                </button>
+<button class="whitespace-nowrap rounded-full border border-gray-200 bg-white px-6 py-2 text-sm font-medium text-text-muted hover:border-primary hover:text-primary transition-colors dark:bg-transparent dark:border-white/20 dark:text-gray-300 dark:hover:border-primary">
+                    Traditional
+                </button>
+<button class="whitespace-nowrap rounded-full border border-gray-200 bg-white px-6 py-2 text-sm font-medium text-text-muted hover:border-primary hover:text-primary transition-colors dark:bg-transparent dark:border-white/20 dark:text-gray-300 dark:hover:border-primary">
+                    Bohemian
+                </button>
+</div>
+</div>
+</section>
+<!-- Product Catalog -->
+<section class="py-16 lg:py-24 bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="mb-12 flex items-end justify-between">
+<div>
+<h2 class="text-3xl font-bold text-text-main dark:text-white font-serif-heading">Our Collections</h2>
+<p class="mt-2 text-text-muted dark:text-gray-400">Handcrafted designs for every style.</p>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-sm text-text-muted dark:text-gray-400">
+<span>Sort by:</span>
+<select class="border-none bg-transparent font-medium text-text-main focus:ring-0 dark:text-white">
+<option>Recommended</option>
+<option>Newest</option>
+<option>Price: Low to High</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+<!-- Card 1 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-hover dark:bg-white/5 dark:shadow-none dark:border dark:border-white/10">
+<div class="relative aspect-[3/4] overflow-hidden bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Elegant gold and white wedding invitation with serif typography" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCs-lQthjCvJq3NUl4-BIEFCnlxoOCFOqRy_EeZma_H9ir1qyXW40DdF_Xl-4fFJuRfmAd-Pb16DACQ4iac7Mh0zct-iP5dELQgBlvBqf0T0KhmoDuiB5Y9KuXABY6GhZG9RNNChvZURBUd0PgeMk3ycmQRMKgmWVUULRiqdmsKLx7eWMPzgnGYoyBiXV-9ka6KTrFk9PGjlupOZmcCzQTjFyjmhu3DnHN1JOyb4l4ISoKMgo-xKiPVxRBXf6KA5RA-19Sz2pNr_eYq');"></div>
+<div class="absolute top-3 right-3 rounded-full bg-white/90 px-2 py-1 text-xs font-bold text-text-main backdrop-blur-sm shadow-sm dark:bg-black/60 dark:text-white">
+                            Best Seller
+                        </div>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-2 flex items-start justify-between">
+<h3 class="font-serif-heading text-lg font-bold text-text-main dark:text-white truncate pr-2">The Golden Era</h3>
+<span class="font-bold text-primary">$45.00</span>
+</div>
+<p class="mb-6 text-sm text-text-muted line-clamp-2 dark:text-gray-400">A classic choice featuring gold foil textures and elegant serif fonts.</p>
+<div class="mt-auto grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 py-2.5 text-xs font-bold uppercase tracking-wide text-text-main transition-colors hover:bg-gray-50 hover:border-primary/50 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                Demo
+                            </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg bg-[#25D366] py-2.5 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#20bd5a] shadow-sm">
+<span class="material-symbols-outlined text-sm">chat</span>
+                                Order
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-hover dark:bg-white/5 dark:shadow-none dark:border dark:border-white/10">
+<div class="relative aspect-[3/4] overflow-hidden bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist floral wedding invitation design with eucalyptus leaves" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTYt2GCnURnN0JY1-nY1RH1gKU3S0OoacskOs6K6gQlPKLPWPGJBy7f4uZxzuhe1jtuPs0596BKQjyApGiqNm3EOdgGxcU0t1whqD8aUkbV-VHL9vfKVSaoi03yzM0yu7DD7-9G0J-r7oHxdJg-mm4niFCgKXw3M9oMfeWrOUVTrviwo2_IprdVw_ZY4ErZqYBgxbzHfoxBM9qW023Z3V4hFoQpkNrSDvpspdOglUquZOgUqIHmQBprjlxR_AJGZLBoxCUJgfhj5o0');"></div>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-2 flex items-start justify-between">
+<h3 class="font-serif-heading text-lg font-bold text-text-main dark:text-white truncate pr-2">Eucalyptus Dream</h3>
+<span class="font-bold text-primary">$39.00</span>
+</div>
+<p class="mb-6 text-sm text-text-muted line-clamp-2 dark:text-gray-400">Soft watercolor greens pair perfectly with modern sans-serif type.</p>
+<div class="mt-auto grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 py-2.5 text-xs font-bold uppercase tracking-wide text-text-main transition-colors hover:bg-gray-50 hover:border-primary/50 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                Demo
+                            </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg bg-[#25D366] py-2.5 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#20bd5a] shadow-sm">
+<span class="material-symbols-outlined text-sm">chat</span>
+                                Order
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-hover dark:bg-white/5 dark:shadow-none dark:border dark:border-white/10">
+<div class="relative aspect-[3/4] overflow-hidden bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Modern geometric wedding invitation with black and gold accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuyGSprOj0NTUXf1qtHOjwaBjGPssQuKZmF1hfUSStZURsFLtK46UMP2gvXIQFrdk45ZRWr2YVlUvhg95yf9A59R4VZqXAHDqMbo1SHLSRZtR_3tnX4eTKurnnFEh3uhjabXRqmJSatWqWhpWQ0VxpG9W25bzBxt5RX5OMgrGv0FaaR44nIficN62DJQywoCrHo1ljTVbIP4cDQDo6f3L-tBldsv_XBNNv2SJItOHJS9fjHSPJCeJ4dYyrKTY5tOarylm2QTET1LOU');"></div>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-2 flex items-start justify-between">
+<h3 class="font-serif-heading text-lg font-bold text-text-main dark:text-white truncate pr-2">Midnight Noir</h3>
+<span class="font-bold text-primary">$55.00</span>
+</div>
+<p class="mb-6 text-sm text-text-muted line-clamp-2 dark:text-gray-400">Sophisticated dark theme with striking gold geometric lines.</p>
+<div class="mt-auto grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 py-2.5 text-xs font-bold uppercase tracking-wide text-text-main transition-colors hover:bg-gray-50 hover:border-primary/50 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                Demo
+                            </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg bg-[#25D366] py-2.5 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#20bd5a] shadow-sm">
+<span class="material-symbols-outlined text-sm">chat</span>
+                                Order
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-hover dark:bg-white/5 dark:shadow-none dark:border dark:border-white/10">
+<div class="relative aspect-[3/4] overflow-hidden bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Romantic pink watercolor wedding invitation" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgqmRpBpe3xZLwcBulII9PXltuB5Tlh-A5gpFALiSfA8i7J69a98iGcU-c6UXhdy8huDssJukeh-wa1JEgZ4OwpmN0qqs68lPiGFDm-sTYhFMt2AlmZvozHFr9cYw5jwNAKBGW0l5uBh1-COk4pATxPDkPIf7gW_Z9BxTvZ5W6anzjD5__ZwmaRHXo-m8V-E09oERFl_XM3Xc4mscVg3R9agcjhsg4viXFdfhxZ8ifYjColAkx8LvAkV7cqLZCibdrNPpdp9190N0t');"></div>
+<div class="absolute top-3 right-3 rounded-full bg-white/90 px-2 py-1 text-xs font-bold text-text-main backdrop-blur-sm shadow-sm dark:bg-black/60 dark:text-white">
+                            New
+                        </div>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-2 flex items-start justify-between">
+<h3 class="font-serif-heading text-lg font-bold text-text-main dark:text-white truncate pr-2">Blush Romance</h3>
+<span class="font-bold text-primary">$42.00</span>
+</div>
+<p class="mb-6 text-sm text-text-muted line-clamp-2 dark:text-gray-400">Delicate pink watercolor wash with romantic script typography.</p>
+<div class="mt-auto grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 py-2.5 text-xs font-bold uppercase tracking-wide text-text-main transition-colors hover:bg-gray-50 hover:border-primary/50 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                Demo
+                            </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg bg-[#25D366] py-2.5 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#20bd5a] shadow-sm">
+<span class="material-symbols-outlined text-sm">chat</span>
+                                Order
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-hover dark:bg-white/5 dark:shadow-none dark:border dark:border-white/10">
+<div class="relative aspect-[3/4] overflow-hidden bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Rustic wood texture wedding invitation with white text" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFJCyzcCvoJTbf3cprYd40vwZfWWr-pZwczAdmVaDGIR0gUeocV6I1WNMK02OxZlowdUpu31uPxhOSNY4xSEHJbenGEJIJ-tRbcuupuWbZttcCaXNPk4fOgPOLOtw2fAtZ2P5eZqOBS1mXRoE6Cn06ge6hXcJFjNf0qxnrn3KjBO7lZMTKtiqVc3e3ifwK9sGuDVf-zyXMJnTFsA3j16TyjQzDLg3m1kYf7xElcrfFofGKypM2pqrOIGmC12KZKlxLZyXGzCuHIQhQ');"></div>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-2 flex items-start justify-between">
+<h3 class="font-serif-heading text-lg font-bold text-text-main dark:text-white truncate pr-2">Rustic Charm</h3>
+<span class="font-bold text-primary">$35.00</span>
+</div>
+<p class="mb-6 text-sm text-text-muted line-clamp-2 dark:text-gray-400">Perfect for barn weddings, featuring wood textures and lights.</p>
+<div class="mt-auto grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 py-2.5 text-xs font-bold uppercase tracking-wide text-text-main transition-colors hover:bg-gray-50 hover:border-primary/50 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                Demo
+                            </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg bg-[#25D366] py-2.5 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#20bd5a] shadow-sm">
+<span class="material-symbols-outlined text-sm">chat</span>
+                                Order
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-hover dark:bg-white/5 dark:shadow-none dark:border dark:border-white/10">
+<div class="relative aspect-[3/4] overflow-hidden bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Clean and minimal white wedding invitation with simple black text" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWJmoi7T93KOPmaJ6o65XLwqJkL6XTz0192Fy-Vc5Tmuze7zwyx8v4LJuUcHSwYWZRgHyKdL_j6swEoKldmey2Mu7HfoRAdsNlKtLxL-YeN-WacorOlhjLfie6vj7pzp0MaHEleauXFtixZDR5WyzF9jwh6h1Ed0GAvFy9sKrXc8aXhNy4I_OXzWb24QCOp8XR1ptdXNVTbqgm_WK7SKwju8YOmfXxdR5kTLMGCFw6mYA-u8pmdvG1T-cgz5Jze9AcN06bh7PG5ykf');"></div>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-2 flex items-start justify-between">
+<h3 class="font-serif-heading text-lg font-bold text-text-main dark:text-white truncate pr-2">Modern Pure</h3>
+<span class="font-bold text-primary">$48.00</span>
+</div>
+<p class="mb-6 text-sm text-text-muted line-clamp-2 dark:text-gray-400">Less is more. A purely typographical approach for modern couples.</p>
+<div class="mt-auto grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 py-2.5 text-xs font-bold uppercase tracking-wide text-text-main transition-colors hover:bg-gray-50 hover:border-primary/50 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                Demo
+                            </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg bg-[#25D366] py-2.5 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#20bd5a] shadow-sm">
+<span class="material-symbols-outlined text-sm">chat</span>
+                                Order
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-hover dark:bg-white/5 dark:shadow-none dark:border dark:border-white/10">
+<div class="relative aspect-[3/4] overflow-hidden bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Vintage art deco wedding invitation design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBm790YZayA8Ota6zXna4J9g_PfGPUQkGHPLexs1k3W-p15ZML9moDQmP0dXa2y2--zIfhyNeOHchz4sxIHa9BOs-uyqU2-Con1XbluSOOceeg8bcAgZBBc0xPW7ULArPufwL1sD8i_7mf84pJhZPb6CkHR9MAYh2ftsMn-yBDs-m66CGvYFSYIR95ManC30jQrnSEvmnMBN9a93y1PXzo_iEPKlrOz5M3esQQmaOUUhsBttCevOZMABzdq_G7T4Otry0YeZxcDeA0Y');"></div>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-2 flex items-start justify-between">
+<h3 class="font-serif-heading text-lg font-bold text-text-main dark:text-white truncate pr-2">Gatsby Night</h3>
+<span class="font-bold text-primary">$50.00</span>
+</div>
+<p class="mb-6 text-sm text-text-muted line-clamp-2 dark:text-gray-400">Art deco inspired patterns with intricate gold detailing.</p>
+<div class="mt-auto grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 py-2.5 text-xs font-bold uppercase tracking-wide text-text-main transition-colors hover:bg-gray-50 hover:border-primary/50 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                Demo
+                            </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg bg-[#25D366] py-2.5 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#20bd5a] shadow-sm">
+<span class="material-symbols-outlined text-sm">chat</span>
+                                Order
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-hover dark:bg-white/5 dark:shadow-none dark:border dark:border-white/10">
+<div class="relative aspect-[3/4] overflow-hidden bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Bohemian wedding invitation with dried flowers and warm tones" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPTtnDBaGA_v0fS7HqoyQcTS1XymRg6ZRL8YQWzs9V9qn62D6lNAYLq7WYywtrY9EbWNg7C4hFScWDkWqs2NznL21b6iy2Rc8_M_3E1D73133TCjawGqngCxK34K_aZx_iz-uBpGOtZS-ASA-znjHzixF5cbbKhDz-m5Tnx0NOGUdDWSdautt4NrdMW0gwDBVuplGHFx837ILX9ATbKBJz2K3OvhqrZQyqM-qEnzcniDP39vRekf8K-arywvmHQitGy1DbEl_6s8x5');"></div>
+</div>
+<div class="flex flex-1 flex-col p-5">
+<div class="mb-2 flex items-start justify-between">
+<h3 class="font-serif-heading text-lg font-bold text-text-main dark:text-white truncate pr-2">Boho Chic</h3>
+<span class="font-bold text-primary">$44.00</span>
+</div>
+<p class="mb-6 text-sm text-text-muted line-clamp-2 dark:text-gray-400">Warm earthy tones with illustration of dried pampas grass.</p>
+<div class="mt-auto grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 py-2.5 text-xs font-bold uppercase tracking-wide text-text-main transition-colors hover:bg-gray-50 hover:border-primary/50 dark:border-white/10 dark:text-white dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                Demo
+                            </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg bg-[#25D366] py-2.5 text-xs font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#20bd5a] shadow-sm">
+<span class="material-symbols-outlined text-sm">chat</span>
+                                Order
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex items-center justify-center gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-text-main hover:bg-gray-50 dark:bg-white/5 dark:border-white/10 dark:text-white">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-text-main font-bold shadow-md shadow-primary/25">1</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-text-main hover:border-primary hover:text-primary transition-colors dark:bg-white/5 dark:border-white/10 dark:text-white dark:hover:border-primary">2</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-text-main hover:border-primary hover:text-primary transition-colors dark:bg-white/5 dark:border-white/10 dark:text-white dark:hover:border-primary">3</button>
+<span class="px-2 text-text-muted">...</span>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-text-main hover:bg-gray-50 dark:bg-white/5 dark:border-white/10 dark:text-white">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="border-t border-[#f0eee6] bg-white pt-16 pb-8 dark:border-white/10 dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-8">
+<div class="lg:col-span-1">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-lg">diamond</span>
+</div>
+<span class="font-serif-heading text-xl font-bold text-text-main dark:text-white">Luxe Invites</span>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-text-muted dark:text-gray-400">
+                        Crafting digital elegance for your most memorable moments. Made with love for weddings worldwide.
+                    </p>
+<div class="mt-6 flex gap-4">
+<a class="text-text-muted hover:text-primary transition-colors dark:text-gray-500 dark:hover:text-primary" href="#">
+<span class="sr-only">Instagram</span>
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.488 2h-.173zM12.315 13.846c-1.954 0-3.538-1.584-3.538-3.538 0-1.954 1.584-3.538 3.538-3.538 1.954 0 3.538 1.584 3.538 3.538 0 1.954-1.584 3.538-3.538 3.538zM15.307 7.307a1.187 1.187 0 11-2.374 0 1.187 1.187 0 012.374 0z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-text-muted hover:text-primary transition-colors dark:text-gray-500 dark:hover:text-primary" href="#">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="lg:col-span-3">
+<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+<div>
+<h3 class="text-sm font-bold leading-6 text-text-main dark:text-white">Shop</h3>
+<ul class="mt-4 space-y-3 text-sm text-text-muted dark:text-gray-400" role="list">
+<li><a class="hover:text-primary transition-colors" href="#">Wedding</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Birthday</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bridal Shower</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Save the Date</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-bold leading-6 text-text-main dark:text-white">Support</h3>
+<ul class="mt-4 space-y-3 text-sm text-text-muted dark:text-gray-400" role="list">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Custom Orders</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-bold leading-6 text-text-main dark:text-white">Company</h3>
+<ul class="mt-4 space-y-3 text-sm text-text-muted dark:text-gray-400" role="list">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-bold leading-6 text-text-main dark:text-white">Legal</h3>
+<ul class="mt-4 space-y-3 text-sm text-text-muted dark:text-gray-400" role="list">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">License</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-[#f0eee6] pt-8 dark:border-white/10">
+<p class="text-center text-xs leading-5 text-text-muted dark:text-gray-500">
+                    © 2024 Luxe Invites, Inc. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
